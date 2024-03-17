@@ -35,13 +35,13 @@ function App() {
     });
 
     setTurn((prev) => (prev === 1 ? 2 : 1));
-
+    
     checkWinner();
   };
 
   useEffect(() => {
     checkWinner();
-    checkGameEnded();
+    checkGameEnded()
   }, [gameData]);
 
   useEffect(() => {
@@ -49,7 +49,7 @@ function App() {
   }, [winningCombo]);
 
   const checkGameEnded = () => {
-    if (gameData.every((item) => item !== 0)) alert("Deu velha!");
+    if (gameData.every((item) => item !== 0)) alert("Deu velha!") ;
   };
 
   const checkWinner = () => {
@@ -115,7 +115,8 @@ function App() {
         </div>
         <div  className="result-game">
           <button onClick={resetGame}>RESET GAME</button>
-          {playerWinner ? <p>{playerWinner.toUpperCase()} GANHOU!!!</p> : ""}
+          {playerWinner ? <p>{playerWinner.toUpperCase()} GANHOU!!!</p> : 
+          playerWinner }
         </div>
       </div>
     </>
