@@ -24,9 +24,15 @@ body {
   align-items: center;
 }
 
-.game-container {
-  background: url("./border-image.svg") fixed no-repeat center center;
+.svg-bg{
+  position: absolute;
 
+}
+
+.game-container {
+  position: relative;
+  right: 3%;
+  bottom: 9px;
   padding: 100px;
 
   width: 650px;
@@ -50,7 +56,7 @@ body {
     &::after {
       content: "";
       display: none;
-      width: 15%;
+      width: 40%;
       height: 10px;
       border-radius: 25px;
       background-color: #aa1a28;
